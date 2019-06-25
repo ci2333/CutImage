@@ -7,7 +7,7 @@ import shutil
 
 from PIL import Image
 
-class CutImage:
+class CutSingleImage:
     """
     切割图像类
     """
@@ -82,7 +82,7 @@ def run():
         list files: 传入的图片文件列表
     """
     
-    cut_image = CutImage(files=[r"1\11.jpg", r"1\21.jpg", r"1\31.jpg"])
+    cut_image = CutSingleImage(files=[r"1\11.jpg", r"1\21.jpg", r"1\31.jpg"])
     cut_image.generate_image(cutrate=177) # 存到当前目录下，文件名称为files中的文件名加数字 1\11-{int}.jpg
 
 if __name__ == "__main__":
